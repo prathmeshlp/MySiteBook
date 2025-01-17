@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  color: #3e4551;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    'Noto Sans',
+    'Liberation Sans',
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
+  margin: 0;
+  padding: 0;
+}
+
+/* Input style for number input */
+/* Chrome, Safari, Edge, Opera */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Sidebar CSS */
+.custom-select {
+  -webkit-appearance: none; /* For Chrome and Safari */
+  -moz-appearance: none; /* For Firefox */
+  appearance: none; /* Standard syntax */
+  background-image: none;
+}
+
+.custom-select::-ms-expand {
+  display: none; /* For IE10 and 11 */
+}
+
+.custom-select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+.sidebar.collapsed {
+  width: 4rem;
+}
+
+.sidebar.collapsed .menu-text {
+  display: none;
+}
+
+.sidebar.collapsed .mr-4 {
+  margin-right: 0;
+}
+
+.sidebar {
+  transition: width 0.3s;
+}
+
+/* Utility Classes */
+.btn-primary {
+  @apply bg-blue-500 border-2 border-primaryBlue text-white font-medium text-sm py-2 px-4 text-center rounded-3xl hover:bg-blue-700;
+}
+
+.btn-secondary {
+  @apply bg-white border border-primaryBlue font-semibold sm:font-medium sm:text-sm text-xs sm:py-2 sm:px-4 py-2 px-2 text-primaryBlue text-center rounded-3xl;
+}
+
+.flex-row-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-column-center {
+  @apply flex flex-col justify-center items-center;
+}
+
+.ellipses {
+  @apply text-ellipsis whitespace-nowrap overflow-hidden;
+}
+
+.error {
+  @apply text-dangerRed;
+}
+
+.disable {
+  @apply bg-darkGray cursor-not-allowed;
+}
